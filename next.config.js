@@ -1,13 +1,16 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
   experimental: {
-    serverComponentsExternalPackages: ["puppeteer-core", "@sparticuz/chromium"], 
+    serverComponentsExternalPackages: [
+      "puppeteer-core",
+      "@sparticuz/chromium",
+    ],
   },
-  webpack: (config, { isserver }) => {
-    if( isserver ) {
-        config.externals.push("@sparticuz/chromium");
+  webpack: (config, { isServer }) => {
+    if (isServer) {
+      config.externals = [...(config.externals || []), "@sparticuz/chromium"];
     }
-      return config:
+    return config;
   },
 };
 
