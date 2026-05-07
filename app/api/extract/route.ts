@@ -1,5 +1,6 @@
 import { NextRequest, NextResponse } from "next/server";
 
+export const runtime = "nodejs"
 export const maxDuration = 60; // Vercel max for Pro plan (adjust to 10 for Hobby)
 export const dynamic = "force-dynamic";
 
