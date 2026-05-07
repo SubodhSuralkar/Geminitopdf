@@ -75,19 +75,6 @@ Frontend (jsPDF)
 
 ---
 
-## Deploying to Vercel
-
-```bash
-npm i -g vercel
-vercel
-```
-
-`vercel.json` already sets 1 GB memory and 60 s timeout for the extraction function — required for Chromium to launch reliably.
-
-> **Hobby plan note:** Free Vercel functions are capped at 10 s. Upgrade to Pro or reduce `maxDuration` and accept that complex pages may time out.
-
----
-
 ## Project Structure
 
 ```
